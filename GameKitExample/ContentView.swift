@@ -19,12 +19,13 @@ struct ContentView: View {
         }
         
         Button(action: {
-            gameManager.startMatchmaking()
+            gameManager.presentMatchmaker()
         }, label: {
             Text("Start Matching")
         })
-        
         .padding()
+        
+        
         .onAppear {
             print(gameManager.authenticationState)
             print(PlayerAuthState.authenticated)
